@@ -58,24 +58,37 @@ with tab2:
 
 # Define the text to be written
 	text = str(quote)
+	size = st.text_input("Enter the font size")
+        wp =st.text_input("Enter the width Percent", key =height)
+        hp =st.text_input("Enter the height Percent") 
+
+        if st.button('generate'):
+                size = int(size)
+                wp = int(wp)
+                hp = int(hp)
+                font = ImageFont.truetype('/home/shiva/Downloads/Nova_Square/NovaSquare-Regular.ttf',size)
+                x = width - ((width * wp)/100)
+                y = height- ((height * hp)/100)
+                draw.text((x, y), text, font=font, fill ="black", align ="center")
+                st.image(image)
 
 # font
-	size = int(st.number_input("Enter the font size"))
-	font = ImageFont.truetype('./image_segmentation/NovaSquare-Regular.ttf', size)
+#	size = int(st.number_input("Enter the font size"))
+#	font = ImageFont.truetype('./image_segmentation/NovaSquare-Regular.ttf', size)
 
 # Calculate the position to center the text
 #text_width, text_height = draw.textlength(text, font)
-	wp =int( st.text_input("Enter the width Percent", key =height))
+#	wp =int( st.text_input("Enter the width Percent", key =height))
 #hlkafaosifj
-	hp =int( st.text_input("Enter the height Percent"))
-	x = width - ((width * wp)/100)
+#	hp =int( st.text_input("Enter the height Percent"))
+#	x = width - ((width * wp)/100)
 #x = width //3
 #y = height // 2
-	y = height- ((height * hp)/100)
+#	y = height- ((height * hp)/100)
 # Write the text on the image
-	draw.text((x, y), text, font=font, fill ="black", align ="center")
+#	draw.text((x, y), text, font=font, fill ="black", align ="center")
 
 # Save the image
 #image.save("/home/shiva/Downloads/output.jpg")
-	st.image(image)
+#	st.image(image)
 
