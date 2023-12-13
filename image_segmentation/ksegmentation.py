@@ -61,7 +61,7 @@ with tab2:
 
 # font
 	size = int(st.number_input("Enter the font size"))
-	font = ImageFont.truetype('NovaSquare-Regular.ttf', size)
+	font = ImageFont.truetype('./image_segmentation/NovaSquare-Regular.ttf', size)
 
 # Calculate the position to center the text
 #text_width, text_height = draw.textlength(text, font)
