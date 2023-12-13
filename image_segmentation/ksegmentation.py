@@ -59,18 +59,17 @@ with tab2:
 # Define the text to be written
 	text = str(quote)
 	size = st.text_input("Enter the font size")
-        wp =st.text_input("Enter the width Percent", key =height)
-        hp =st.text_input("Enter the height Percent") 
-
-        if st.button('generate'):
-                size = int(size)
-                wp = int(wp)
-                hp = int(hp)
-                font = ImageFont.truetype('/home/shiva/Downloads/Nova_Square/NovaSquare-Regular.ttf',size)
-                x = width - ((width * wp)/100)
-                y = height- ((height * hp)/100)
-                draw.text((x, y), text, font=font, fill ="black", align ="center")
-                st.image(image)
+	wp =st.text_input("Enter the width Percent", key =height)
+	hp =st.text_input("Enter the height Percent") 
+	if st.button('generate'):
+		size = int(size)
+		wp = int(wp)
+		hp = int(hp)
+		font = ImageFont.truetype('/home/shiva/Downloads/Nova_Square/NovaSquare-Regular.ttf',size)
+		x = width - ((width * wp)/100)
+		y = height- ((height * hp)/100)
+		draw.text((x, y), text, font=font, fill ="black", align ="center")
+		st.image(image)
 
 # font
 #	size = int(st.number_input("Enter the font size"))
