@@ -60,7 +60,7 @@ with tab2:
 	text = str(quote)
 
 # font
-	size = int(st.text_input("Enter the font size"))
+	size = int(float(st.text_input("Enter the font size")))
 	font = ImageFont.truetype('NovaSquare-Regular.ttf', size)
 
 # Calculate the position to center the text
