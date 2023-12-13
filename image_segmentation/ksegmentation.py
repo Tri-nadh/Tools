@@ -51,7 +51,7 @@ with tab2:
 	quote = st.text_area("Enter the Quote:")
 
 # Create a new image with white background
-	image = Image.open("/home/shiva/Downloads/Content/Quote/quote.jpg")
+	image = Image.open("quote.jpg")
 	width, height = image.width, image.height
 # Create a drawing object
 	draw = ImageDraw.Draw(image)
@@ -61,7 +61,7 @@ with tab2:
 
 # font
 	size = int(st.text_input("Enter the font size"))
-	font = ImageFont.truetype('/home/shiva/Downloads/Nova_Square/NovaSquare-Regular.ttf', size)
+	font = ImageFont.truetype('NovaSquare-Regular.ttf', size)
 
 # Calculate the position to center the text
 #text_width, text_height = draw.textlength(text, font)
