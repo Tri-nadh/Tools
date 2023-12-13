@@ -51,7 +51,7 @@ with tab2:
 	quote = st.text_area("Enter the Quote:")
 
 # Create a new image with white background
-	image = Image.open("quote.jpg")
+	image = Image.open("./quote.jpg")
 	width, height = image.width, image.height
 # Create a drawing object
 	draw = ImageDraw.Draw(image)
